@@ -25,12 +25,6 @@ export default {
 <style lang="scss">
 @import './Style/common.scss';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  // font-family: 'Poiret One', 'Arial', 'Sans Serif';
-}
 // #app {
 //   font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
