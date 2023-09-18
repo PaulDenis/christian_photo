@@ -25,12 +25,17 @@ export default {
 <style lang="scss">
 @import './Style/common.scss';
 
-// #app {
+#app {
+  height: 100vh;
+  // width: 100vh;
+  background-image: url("~@/assets/foto_sfondo.jpg");
+  background-size: cover;
+  background-position: center;
 //   font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 //   text-align: center;
 //   color: #2c3e50;
 //   margin-top: 60px;
-// }
+}
 </style>
