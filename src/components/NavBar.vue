@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <img class="logo" src="../assets/logo-placeholder-image.png"
+        <img class="logo" src="../assets/logo.png"
             v-on:click="show = true" 
             v-if="show == false"
         >
@@ -52,6 +52,8 @@ export default {
 .logo {
     height: 100%;
     width: auto;
+    padding-top: 5px;
+    margin-right: 10px;
 }
 nav {
     height: 50px;
@@ -65,6 +67,9 @@ nav {
 ul {
     text-align: right;
     list-style: none;
+    height: 100vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
     li {
         width: 100px;
         padding-right: 10px;
