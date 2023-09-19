@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <img class="logo" src="../assets/logo.png"
+        <img class="logo" src="../assets/logo_temporaneo.jpg"
             v-on:click="show = true" 
             v-if="show == false"
         >
@@ -14,10 +14,14 @@
                         v-on:click="outAnim()">
                     </i>
                 </li>
-                <li :class="pagina_corrente == 'home' ? 'current' : ''">Home</li>
-                <li>My work</li>
-                <li>About me</li>
-                <li>Contacts</li>
+                <li @click="$emit('change_view', 'home')"
+                    :class="current_page == 'home' ? 'current' : ''">Home</li>
+                <li @click="$emit('change_view', 'gallery')"
+                    :class="current_page == 'gallery' ? 'current' : ''">My work</li>
+                <li @click="$emit('change_view', 'about_me')"
+                    :class="current_page == 'about_me' ? 'current' : ''">About me</li>
+                <li @click="$emit('change_view', 'contacts')"
+                    :class="current_page == 'contacts' ? 'current' : ''">Contacts</li>
             </ul>
         </div>
     </nav>
@@ -27,13 +31,13 @@
 export default {
     name: 'NavBar',
     props: {
-
+        current_page: String
     },
     data() {
         return {
             show: false,
             deleting: false,
-            pagina_corrente: 'home'
+            // pagina_corrente: this.current_page
         }
     },
     methods: {
@@ -86,6 +90,7 @@ ul {
 }
 .current {
     border-right: 5px solid red;
+    font-weight: bold;
 }
 
 @keyframes slide_in {
