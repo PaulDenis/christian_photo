@@ -2,8 +2,10 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <NavBar/>
-    <Homepage/>
+    <NavBar v-if="!ishome()"
+    :current_page="current_page" @change_view="change_current_page"/>
+    <Homepage v-if="current_page == 'home'"
+    :current_page="current_page" @change_view="change_current_page"/>
   </div>
 </template>
 
@@ -18,6 +20,23 @@ export default {
     // HelloWorld
     Homepage,
     NavBar
+  },
+  props: {
+  },
+  data() {
+    return {
+      current_page: "home"
+    }
+  },
+  methods: {
+    change_current_page(new_page) {
+      this.current_page = new_page;
+      // console.log(this.current_page);
+    },
+    ishome() {
+      return this.current_page === 'home';
+      
+    }
   }
 }
 </script>
@@ -38,4 +57,5 @@ export default {
 //   color: #2c3e50;
 //   margin-top: 60px;
 }
+
 </style>
