@@ -1,10 +1,8 @@
 <template>
     <nav>
         <img class="logo" src="../assets/logo_temporaneo.jpg"
-            v-on:click="show = true" 
-            v-if="show == false"
-        >
-        <div class="menu" 
+            @click="$emit('change_view', 'home')">
+        <!-- <div class="menu" 
             :class="deleting ? 'deleting' : ''"
             v-if="show" 
             >
@@ -23,7 +21,7 @@
                 <li @click="$emit('change_view', 'contacts')"
                     :class="current_page == 'contacts' ? 'current' : ''">Contacts</li>
             </ul>
-        </div>
+        </div> -->
     </nav>
 </template>
 
