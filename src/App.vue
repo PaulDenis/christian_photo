@@ -6,13 +6,13 @@
     :current_page="current_page" @change_view="change_current_page"/>
     <HomePage v-if="current_page == 'home'"
     :current_page="current_page" @change_view="change_current_page"/>
-    <Gallery/>
+    <Gallery v-if="current_page == 'gallery'"/>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import HomePage from '/components/HomePage.vue'
+import HomePage from './components/HomePage.vue'
 import NavBar from './components/NavBar.vue'
 import Gallery from './components/Gallery.vue'
 

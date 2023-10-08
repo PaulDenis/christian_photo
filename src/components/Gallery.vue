@@ -1,6 +1,8 @@
 <template>
   <div>
-
+    <div v-for=" img in images" :key="img">
+        <img :src="img.image" :alt="img.image">
+    </div>
   </div>
 </template>
 
@@ -8,15 +10,31 @@
 export default {
       name: 'HomePage',
       props: {
-         current_page: String
+
       },
       data() {
          return {
+            images: [
+                {
+                    name: 'img1',
+                    image: './assets/foto_sfondo.jpg'
+                },
+                {
+                    name: 'img2',
+                    image: '../assets/logo_temporaneo.jpg'
+                },
+                {
+                    name: 'img3',
+                    image: '../assets/logo.png'
+                }
+            ]
          }
       }
    }
 </script>
 
 <style>
-
+    div {
+        color: white;
+    }
 </style>
