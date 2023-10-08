@@ -26,7 +26,35 @@ export default {
                 {
                     id: 'img3',
                     image: require('../assets/logo.png')
-                }
+                },
+                {
+                    id: 'img4',
+                    image: require('../assets/29.1.jpg')
+                },
+                {
+                    id: 'img5',
+                    image: require('../assets/18.jpg')
+                },
+                {
+                    id: 'img6',
+                    image: require('../assets/11.jpg')
+                },
+                {
+                    id: 'img7',
+                    image: require('../assets/10.jpg')
+                },
+                {
+                    id: 'img8',
+                    image: require('../assets/8.jpg')
+                },
+                {
+                    id: 'img9',
+                    image: require('../assets/7.1.jpg')
+                },
+                {
+                    id: 'img10',
+                    image: require('../assets/_DSF9666.jpg')
+                },
             ]
          }
       }
