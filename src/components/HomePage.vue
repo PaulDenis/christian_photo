@@ -2,7 +2,7 @@
    <div class="banner">
       <img class="logo" src="../assets/logo_temporaneo.jpg" alt="logo">
       <h1>Photoentropy</h1>
-      <ul class="orizontal_menu">
+      <!-- <ul class="orizontal_menu">
          <li @click="$emit('change_view', 'home')"
             :class="this.current_page == 'home' ? 'current' : ''">Home</li>
          <li @click="$emit('change_view', 'gallery')" 
@@ -11,7 +11,7 @@
             :class="this.current_page == 'about_me' ? 'current' : ''">About me</li>
          <li @click="$emit('change_view', 'contacts')"
             :class="this.current_page == 'contacts' ? 'current' : ''">Contacts</li>
-      </ul>
+      </ul> -->
    </div>
 </template>
   
@@ -33,7 +33,7 @@
   
    .banner {
       position: absolute;
-      bottom: 15%;
+      bottom: 25%;
       // height: 10%;
       width: 100%;
       text-align: center;
@@ -45,14 +45,16 @@
          float: left;
          margin: 10px;
       }
+      //This does not work on mobile
       // &:hover {
       //    cursor: pointer;
       //    background-color: rgba(0, 0, 0, 0.7);
       // }
 
-      //This does not work on mobile
       h1 {
-         margin-top: 10px;
+         width: 30%;
+         margin: auto;
+         margin-top: 35px;
       }
    }
    .orizontal_menu {
