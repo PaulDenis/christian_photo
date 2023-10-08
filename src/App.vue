@@ -53,6 +53,8 @@ export default {
   background-image: url("~@/assets/foto_sfondo.jpg");
   background-size: cover;
   background-position: center;
+  overflow: scroll;
+  // background-attachment: fixed;
 //   font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
