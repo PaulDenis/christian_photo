@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div v-for=" img in images" :key="img">
+  <div class="gallery">
+    <div class="card" v-for=" img in images" :key="img.id">
         <img :src="img.image" :alt="img.image">
     </div>
   </div>
@@ -16,16 +16,16 @@ export default {
          return {
             images: [
                 {
-                    name: 'img1',
-                    image: './assets/foto_sfondo.jpg'
+                    id: 'img1',
+                    image: require('../assets/foto_sfondo.jpg')
                 },
                 {
-                    name: 'img2',
-                    image: '../assets/logo_temporaneo.jpg'
+                    id: 'img2',
+                    image: require('../assets/logo_temporaneo.jpg')
                 },
                 {
-                    name: 'img3',
-                    image: '../assets/logo.png'
+                    id: 'img3',
+                    image: require('../assets/logo.png')
                 }
             ]
          }
@@ -33,8 +33,22 @@ export default {
    }
 </script>
 
-<style>
-    div {
+<style scoped lang="scss">
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+    .card {
+        width: 40vw;
+        height: auto;
+        margin: 5%;
+        padding: 2%;
         color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 </style>
