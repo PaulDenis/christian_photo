@@ -1,23 +1,33 @@
 <template>
-   <div class="banner">
-      <img class="logo" src="../assets/logo_temporaneo.jpg" alt="logo">
-      <h1>Photoentropy</h1>
-      <ul class="orizontal_menu">
-         <!-- <li @click="$emit('change_view', 'home')"
-            :class="this.current_page == 'home' ? 'current' : ''">Home</li> -->
-         <li @click="$emit('change_view', 'gallery')" 
-            :class="this.current_page == 'gallery' ? 'current' : ''">My work</li>
-         <!-- <li @click="$emit('change_view', 'about_me')"
-            :class="this.current_page == 'about_me' ? 'current' : ''">About me</li>
-         <li @click="$emit('change_view', 'contacts')"
-            :class="this.current_page == 'contacts' ? 'current' : ''">Contacts</li> -->
-      </ul>
+   <div>
+      <div class="banner">
+         <img class="logo" src="../assets/logo_temporaneo.jpg" alt="logo">
+         <h1>Photoentropy</h1>
+         <ul class="orizontal_menu">
+            <!-- <li @click="$emit('change_view', 'home')"
+               :class="this.current_page == 'home' ? 'current' : ''">Home</li> -->
+            <li @click="$emit('change_view', 'gallery')" 
+               :class="this.current_page == 'gallery' ? 'current' : ''">My work</li>
+            <!-- <li @click="$emit('change_view', 'about_me')"
+               :class="this.current_page == 'about_me' ? 'current' : ''">About me</li>
+            <li @click="$emit('change_view', 'contacts')"
+               :class="this.current_page == 'contacts' ? 'current' : ''">Contacts</li> -->
+         </ul>
+      </div>
+    <AboutMe class="about_me"/>
+
    </div>
 </template>
   
 <script>
+   import AboutMe from '../components/AboutMe.vue'
+
    export default {
       name: 'HomePage',
+      components: {
+         AboutMe
+
+      },
       props: {
          current_page: String
       },
@@ -32,10 +42,9 @@
 <style scoped lang="scss">
   
    .banner {
-      position: absolute;
-      bottom: 25%;
-      // height: 10%;
-      width: 100%;
+      position: relative;
+      top: 40vh;
+      width: 100vw;
       text-align: center;
       background-color: rgba(0, 0, 0, 0.6);
       color: white;
@@ -54,8 +63,19 @@
       h1 {
          width: 30%;
          margin: auto;
-         margin-top: 35px;
+         padding-top: 5%;
       }
+
+      &::after {
+         content: "";
+         display: table;
+         clear: both;
+      }
+   }
+
+   .about_me {
+      position: relative;
+      top: 50vh;
    }
    .orizontal_menu {
       list-style: none;

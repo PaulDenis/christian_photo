@@ -6,7 +6,10 @@
     :current_page="current_page" @change_view="change_current_page"/>
     <HomePage v-if="current_page == 'home'"
     :current_page="current_page" @change_view="change_current_page"/>
+    
+    
     <Gallery v-if="current_page == 'gallery'"/>
+
   </div>
 </template>
 
@@ -15,14 +18,13 @@
 import HomePage from './components/HomePage.vue'
 import NavBar from './components/NavBar.vue'
 import Gallery from './components/Gallery.vue'
-
 export default {
   name: 'App',
   components: {
     // HelloWorld
     HomePage,
     NavBar,
-    Gallery
+    Gallery,
   },
   props: {
   },
