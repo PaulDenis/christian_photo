@@ -4,22 +4,25 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <NavBar v-if="!ishome()"
     :current_page="current_page" @change_view="change_current_page"/>
-    <Homepage v-if="current_page == 'home'"
+    <HomePage v-if="current_page == 'home'"
     :current_page="current_page" @change_view="change_current_page"/>
+    <Gallery v-if="current_page == 'gallery'"/>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Homepage from './components/HomePage.vue'
+import HomePage from './components/HomePage.vue'
 import NavBar from './components/NavBar.vue'
+import Gallery from './components/Gallery.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    Homepage,
-    NavBar
+    HomePage,
+    NavBar,
+    Gallery
   },
   props: {
   },
