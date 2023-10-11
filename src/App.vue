@@ -6,7 +6,10 @@
     :current_page="current_page" @change_view="change_current_page"/>
     <HomePage v-if="current_page == 'home'"
     :current_page="current_page" @change_view="change_current_page"/>
+    
+    
     <Gallery v-if="current_page == 'gallery'"/>
+    <div class="blank"></div>
   </div>
 </template>
 
@@ -15,14 +18,13 @@
 import HomePage from './components/HomePage.vue'
 import NavBar from './components/NavBar.vue'
 import Gallery from './components/Gallery.vue'
-
 export default {
   name: 'App',
   components: {
     // HelloWorld
     HomePage,
     NavBar,
-    Gallery
+    Gallery,
   },
   props: {
   },
@@ -49,13 +51,17 @@ export default {
 
 #app {
   height: 100vh;
-  // width: 100vh;
+  width: 100vw;
   background-image: url("~@/assets/foto_sfondo.jpg");
   background-size: cover;
   background-position: center;
   overflow: scroll;
-  // background-attachment: fixed;
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
+  .blank {
+    height: 5vh;
+    width: 100vw;
+  }
+// background-attachment: fixed;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 //   text-align: center;
