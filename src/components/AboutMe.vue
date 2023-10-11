@@ -1,12 +1,11 @@
 <template>
   <div>
-    <img src="../assets/8.jpg" alt="Huskye">
-    <h3>About me</h3>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eius eaque iste vel obcaecati dolores, harum, odit magni maxime nisi voluptatem eligendi maiores a 
-        provident mollitia neque quia. Blanditiis consequuntur laborum eveniet deserunt ducimus magnam dolore autem, voluptate odio tempore maiores ipsam fugit quod perspiciatis 
-        voluptatibus, ipsum ratione. Minima reprehenderit magnam quos, repellat, veritatis maxime iste voluptates facilis harum ipsa est assumenda ab voluptatibus quam sapiente 
-        animi error. Quasi quam necessitatibus laborum eveniet corrupti id hic harum animi ad beatae. Necessitatibus vitae hic, architecto quas ipsa laudantium nostrum nam qui nemo.
-         Fugiat, optio odio! Maiores voluptatum impedit repudiandae deleniti dolor.</p>
+    <img src="../assets/Christian.png" alt="Huskye">
+    <h3>Chi sono</h3>
+    <br>
+    <p>Adoro tenere la Macchina Fotografica tra le mani e osservare la reazione delle persone per i miei lavori.<br>
+        Musicista, fotografo e videomaker, ex Geometra.<br>
+        Mi Diverto nel mentre che trasformo una passione in un lavoro.</p>
   </div>
 </template>
 
@@ -21,12 +20,12 @@ export default {
 
 <style scoped lang="scss">
 div {
-    padding: 3%;
+    padding: 5%;
     background-color: rgba(0, 0, 0, 0.7);
 
 }
     img {
-        width: 50%;
+        width: 40vw;
         float: left;
         margin-right: 3%;
     }

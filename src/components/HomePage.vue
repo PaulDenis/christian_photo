@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="homepage">
       <div class="banner">
          <img class="logo" src="../assets/logo_temporaneo.jpg" alt="logo">
          <h1>Photoentropy</h1>
@@ -42,8 +42,8 @@
 <style scoped lang="scss">
   
    .banner {
-      position: relative;
-      top: 40vh;
+      // position: relative;
+      margin-top: 40vh;
       width: 100vw;
       text-align: center;
       background-color: rgba(0, 0, 0, 0.6);
@@ -74,22 +74,19 @@
    }
 
    .about_me {
-      position: relative;
-      top: 50vh;
+      // position: relative;
+      margin-top: 50vh;
    }
    .orizontal_menu {
       list-style: none;
       margin-top: 20px;
       margin-bottom: 20px;
-      width: 90%;
+      width: 90vw;
       li {
          display: inline-block;
          margin-right: 15px;
       }
    }
 
-   .current {
-      border-bottom: 2px solid blue;
-   }
 </style>
   

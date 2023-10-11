@@ -25,7 +25,7 @@ export default {
                 },
                 {
                     id: 'img3',
-                    image: require('../assets/logo.png')
+                    image: require('../assets/Christian.png')
                 },
                 {
                     id: 'img4',

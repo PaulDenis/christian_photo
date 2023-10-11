@@ -9,7 +9,7 @@
     
     
     <Gallery v-if="current_page == 'gallery'"/>
-
+    <div class="blank"></div>
   </div>
 </template>
 
@@ -51,13 +51,17 @@ export default {
 
 #app {
   height: 100vh;
-  // width: 100vh;
+  width: 100vw;
   background-image: url("~@/assets/foto_sfondo.jpg");
   background-size: cover;
   background-position: center;
   overflow: scroll;
-  // background-attachment: fixed;
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
+  .blank {
+    height: 5vh;
+    width: 100vw;
+  }
+// background-attachment: fixed;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
 //   text-align: center;
