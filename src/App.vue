@@ -9,7 +9,6 @@
     
     
     <Gallery v-if="current_page == 'gallery'"/>
-    <div class="blank"></div>
   </div>
 </template>
 
@@ -56,10 +55,10 @@ export default {
   background-size: cover;
   background-position: center;
   overflow: scroll;
-  .blank {
-    height: 5vh;
-    width: 100vw;
-  }
+  // .blank {
+  //   height: 5vh;
+  //   width: 100vw;
+  // }
 // background-attachment: fixed;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 //   -webkit-font-smoothing: antialiased;
