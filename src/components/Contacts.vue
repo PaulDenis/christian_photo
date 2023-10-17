@@ -30,6 +30,7 @@ export default {
     h3 {
       text-align: center;
       padding-top: 3vw;
+      color: wheat;
     }
     .contact_list {
       margin-left: 3vw;
