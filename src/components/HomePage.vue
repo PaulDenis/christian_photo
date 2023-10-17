@@ -15,17 +15,20 @@
          </ul>
       </div>
     <AboutMe class="about_me"/>
+    <ContactMe />
 
    </div>
 </template>
   
 <script>
    import AboutMe from '../components/AboutMe.vue'
+   import ContactMe from '../components/Contacts.vue'
 
    export default {
       name: 'HomePage',
       components: {
-         AboutMe
+         AboutMe,
+         ContactMe
 
       },
       props: {
